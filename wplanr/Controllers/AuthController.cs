@@ -1,11 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using wplanr.Core.Interfaces;
 using wplanr.Core.Models;
-using wplanr.Requests;
 
 namespace wplanr.Controllers
 {

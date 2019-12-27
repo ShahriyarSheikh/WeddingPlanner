@@ -10,17 +10,18 @@ namespace wplanr.Repository.Implementation
 {
     public class AuthRepository : IAuthRepository
     {
+        private readonly IMongoAdapter _mongoAdapter;
 
-        public AuthRepository()
+        public AuthRepository(IMongoAdapter mongoAdapter)
         {
-
+            _mongoAdapter = mongoAdapter;
         }
 
         public async Task<LoginResponse> LoginAsync(Login login)
         {
-            var loginDto = new LoginDTO { };
-            return new LoginResponse {IsLoggedIn = false,Token = loginDto.Token  };
-            //return null;
+            var loginDto = new LoginDTO { IsLoggedIn = false };
+            var result = await _mongoAdapter.InsertOneAsync<LoginDTO>(loginDto, "User");
+            return new LoginResponse {IsLoggedIn = result, Token = loginDto.Token  };
         }
     }
 }

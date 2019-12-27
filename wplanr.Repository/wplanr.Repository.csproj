@@ -5,7 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.1.0" />
+    <PackageReference Include="Polly" Version="7.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\wplanr.Core\wplanr.Core.csproj" />
+    <ProjectReference Include="..\wplanr.DbContext\wplanr.DbContext.csproj" />
     <ProjectReference Include="..\wplanr.DTO\wplanr.DTO.csproj" />
   </ItemGroup>
 
