@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\wplanr.Core\wplanr.Core.csproj" />
+    <ProjectReference Include="..\wplanr.DTO\wplanr.DTO.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -13,7 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wplanr.Core", "wplanr.Core\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wplanr.Repository", "wplanr.Repository\wplanr.Repository.csproj", "{6086B3A2-DB5F-4D84-B3D9-97B501958CDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wplanr.DbContext", "wplanr.DbContext\wplanr.DbContext.csproj", "{CA961C9F-D338-4B6C-B4C3-A85EB27556A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wplanr.DbContext", "wplanr.DbContext\wplanr.DbContext.csproj", "{CA961C9F-D338-4B6C-B4C3-A85EB27556A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{D6A5F63B-E1AA-4E5A-B435-D64264947A8C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{07D082F0-161E-4DFE-8132-4824D9F16D4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{E9D25B52-C1C4-460B-84FD-F65ADA7EC386}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +54,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7B0925F2-EF51-4E02-BDF8-0AEBC69B3D70} = {D6A5F63B-E1AA-4E5A-B435-D64264947A8C}
+		{4AD250C5-745F-42FA-AA10-05B287D7A92D} = {07D082F0-161E-4DFE-8132-4824D9F16D4A}
+		{D236DA7A-9A30-46EB-AB09-19A3AFBD400C} = {E9D25B52-C1C4-460B-84FD-F65ADA7EC386}
+		{E51C968B-5F68-477D-AF17-4C39DCEA6EB5} = {07D082F0-161E-4DFE-8132-4824D9F16D4A}
+		{6086B3A2-DB5F-4D84-B3D9-97B501958CDA} = {E9D25B52-C1C4-460B-84FD-F65ADA7EC386}
+		{CA961C9F-D338-4B6C-B4C3-A85EB27556A4} = {E9D25B52-C1C4-460B-84FD-F65ADA7EC386}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {74AA17AE-0A63-4219-BA26-E874B880913F}

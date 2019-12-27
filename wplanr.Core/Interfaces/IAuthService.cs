@@ -4,9 +4,9 @@ using System.Text;
 using System.Threading.Tasks;
 using wplanr.Core.Models;
 
-namespace wplanr.DTO.Interfaces
+namespace wplanr.Core.Interfaces
 {
-    public interface IAuthRepository
+    public interface IAuthService
     {
         Task<LoginResponse> LoginAsync(Login login);
     }

@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using wplanr.Core.Interfaces;
+using wplanr.Core.Models;
 using wplanr.Requests;
 
 namespace wplanr.Controllers
@@ -11,14 +13,25 @@ namespace wplanr.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        public AuthController()
-        {
+        private readonly IAuthService _authService;
 
+        public AuthController(IAuthService authService)
+        {
+            _authService = authService;
         }
 
+        [HttpGet]
+        public async Task<bool> Checker() {
+            return false;
+        }
 
-        public async Task<bool> LoginAsync(Login login) {
-
+        [HttpPost,Route("Login")]
+        public async Task<LoginResponse> LoginAsync(Requests.Login login) {
+            return await _authService.LoginAsync(new Core.Models.Login
+            {
+                Password = login.Password,
+                Username = login.Username
+            });
         }
 
     }

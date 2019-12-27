@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Mongo\" />
+    <Compile Remove="Mongo\**" />
+    <EmbeddedResource Remove="Mongo\**" />
+    <None Remove="Mongo\**" />
   </ItemGroup>
 
 </Project>

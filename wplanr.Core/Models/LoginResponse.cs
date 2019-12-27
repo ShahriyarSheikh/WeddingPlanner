@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace wplanr.DTO.Models
+namespace wplanr.Core.Models
 {
-    public class LoginDTO
+    public class LoginResponse
     {
         public string Token { get; set; }
         public bool IsLoggedIn { get; set; }
