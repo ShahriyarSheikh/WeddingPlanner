@@ -1,23 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using wplanr.Core.ConfigurationModels;
-using wplanr.Core.Interfaces;
 using wplanr.DbContext.IDatabaseContext;
 using wplanr.DbContext.MongoContext;
 using wplanr.DTO.Interfaces;
+using wplanr.IOC;
 using wplanr.Repository.Adapter;
-using wplanr.Repository.Implementation;
-using wplanr.Services.Implementation;
 
 namespace wplanr
 {
@@ -45,8 +37,7 @@ namespace wplanr
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddTransient<IAuthService, AuthService>();
-            services.AddTransient<IAuthRepository, AuthRepository>();
+            services.RegisterModules();
             services.AddTransient<IMongoAdapter, MongoAdapter>();
             services.AddTransient<IMongoContext, MongoContext>();
 

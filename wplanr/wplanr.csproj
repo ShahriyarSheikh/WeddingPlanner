@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\wplanr.Core\wplanr.Core.csproj" />
+    <ProjectReference Include="..\wplanr.IOC\wplanr.IOC.csproj" />
     <ProjectReference Include="..\wplanr.Repository\wplanr.Repository.csproj" />
     <ProjectReference Include="..\wplanr.Services\wplanr.Services.csproj" />
   </ItemGroup>
