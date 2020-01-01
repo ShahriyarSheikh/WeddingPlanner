@@ -9,6 +9,7 @@ using wplanr.DbContext.IDatabaseContext;
 using wplanr.DbContext.MongoContext;
 using wplanr.DTO.Interfaces;
 using wplanr.IOC;
+using wplanr.Modules;
 using wplanr.Repository.Adapter;
 
 namespace wplanr
@@ -36,6 +37,12 @@ namespace wplanr
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+
+            // Configure jwt authentication
+            var jwtSettings = Configuration.GetSection(nameof(JwtAuthenticationSettings)).Get<JwtAuthenticationSettings>();
+            ApplicationModules.SetupJwtMechanism(services, jwtSettings);
+
 
             services.RegisterModules();
             services.AddTransient<IMongoAdapter, MongoAdapter>();
