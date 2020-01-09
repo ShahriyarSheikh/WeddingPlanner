@@ -45,8 +45,7 @@ namespace wplanr
 
 
             services.RegisterModules();
-            services.AddTransient<IMongoAdapter, MongoAdapter>();
-            services.AddTransient<IMongoContext, MongoContext>();
+
 
             services.Configure<MongoConnectionStrings>(Configuration.GetSection("MongoConnectionStrings"));
         }
